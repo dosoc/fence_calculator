@@ -146,6 +146,9 @@ const totalCost = function(value) {
 //Eventlisteners
 
 submitButton.addEventListener('click', () => {
+    if (linearFeet.value < 1) {
+        alert('Please enter valid linear footage') 
+    } else {
     postQty.innerText = calculatePosts(linearFeet.value);
     railQty.innerText = calculateRails(linearFeet.value, fenceSelection.value);
     picketsQty.innerText = calculatePickets(linearFeet.value, fenceSelection.value);
@@ -156,4 +159,5 @@ submitButton.addEventListener('click', () => {
     setItemCosts();
     setTotals(materialSelection.value);
     totalCost(materialSelection.value);
+}
 })
