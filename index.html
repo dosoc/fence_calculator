@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fence Material Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header> 
+        <h1>Fence Material Calculator</h1>
+        <p>Select the style and size of your wooden fence and recieve a total material list</p>
+    </header>
+    <main>
+        <div class="container">
+            <form action="">
+                <label for="fence-type">Fence Type</label>
+                <select name="fence-type" id="fence-type">
+                    <option value="privacy">Privacy</option>
+                    <option value="shadow-box">Shadow Box</option>
+                    <option value="board-on-board">Board on Board</option>
+                    <option value="framed-and-capped">Framed and Capped</option>
+                </select>
+                <label for="material-type">Material Type</label>
+                <select name="material-type" id="material-type">
+                    <option value="pine">Pine</option>
+                    <option value="cedar">Cedar</option>
+                </select>
+                <label for="LF">Linear Feet</label>
+                <input name="LF" id="LF" type="number">
+                <button id="fence-submit" type="button">SUBMIT</button>
+            </form>
+            <table class="material-table">
+                <thead>
+                    <th>Materials</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Item Total</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Posts<br><em>(4x4x8)</em> </th>
+                        <td id="postsQty">0</td>
+                        <td id="postPrice">0</td>
+                        <td id="postCost">0</td>
+                    </tr>
+                    <tr>
+                        <th>Rails<br>(2x4x8)</th>
+                        <td id="railsQty">0</td>
+                        <td id="railsPrice">0</td>
+                        <td id="railsCost">0</td>
+                    </tr>
+                    <tr>
+                        <th>Pickets<br>(5.5")</th>
+                        <td id="picketsQty">0</td>
+                        <td id="picketsPrice">0</td>
+                        <td id="picketsCost">0</td>
+                    </tr>
+                    <tr>
+                        <th>Concrete Mix<br>(80lbs.)</th>
+                        <td id="concreteQty">0</td>
+                        <td id="concretePrice">0</td>
+                        <td id="concreteCost">0</td>
+                    </tr>
+                    <tr>
+                        <th>3" Nails<br>(each)</th>
+                        <td id="nails3Qty">0</td>
+                        <td id="nails3Price">0</td>
+                        <td id="nails3Cost">0</td>
+                    </tr>
+                    <tr>
+                        <th>2" Nails<br>(each)</th>
+                        <td id="nails2Qty">0</td>
+                        <td id="nails2Price">0</td>
+                        <td id="nails2Cost">0</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <div class="total-container">
+                <span id="total-cost"></span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
