@@ -132,12 +132,12 @@ const setTotals = function (type) {
 
 }
 const totalCost = function(value) {
-    let cost = totalRailCost + totalPostCost + totalConcreteCost + totalNails2Cost + totalNails3Cost;
+    let cost = Number(totalRailCost) + Number(totalPostCost) + Number(totalConcreteCost) + Number(totalNails2Cost) + Number(totalNails3Cost);
     if (value === 'cedar'){
-        cost = cost + totalCedarCost;
+        cost = cost + Number(totalCedarCost);
     } 
     if (value === 'pine') {
-        cost = cost + totalPineCost;
+        cost = cost + Number(totalPineCost);
     }
     totalCostDisplay.innerText = `The total cost to build a ${linearFeet.value} foot long ${fenceSelection.value} fence out of ${materialSelection.value} will cost $${cost} in materials.`
 }
