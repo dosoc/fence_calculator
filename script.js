@@ -139,7 +139,7 @@ const totalCost = function(value) {
     if (value === 'pine') {
         cost = cost + Number(totalPineCost);
     }
-    totalCostDisplay.innerText = `The total cost to build a ${linearFeet.value} foot long ${fenceSelection.value} fence out of ${materialSelection.value} will cost $${cost} in materials.`
+    totalCostDisplay.innerText = `The total cost to build a ${linearFeet.value} foot long ${fenceSelection.value} fence out of ${materialSelection.value} will be $${cost.toFixed(2)} in materials.`
 }
 
 

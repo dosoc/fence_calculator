@@ -3,7 +3,7 @@
     text-align: center;
 }
 body {
-    margin: 0;
+    margin: 10px;
     padding: 0;
 }
 .container {
@@ -27,4 +27,13 @@ tbody th {
 }
 td, th {
     border: 1px solid white;
+}
+@media screen and (max-width : 500px){
+    table {
+        width: 350px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
 }
